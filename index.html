@@ -1,0 +1,492 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen-0a7c4629.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-c427a123.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-c2b401f0.png" class="logo" alt="Logo" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#tickets" class="toc-h1 toc-link" data-title="Tickets">Tickets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-tickets" class="toc-h2 toc-link" data-title="Get All Tickets">Get All Tickets</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#check-ins" class="toc-h1 toc-link" data-title="Check-ins">Check-ins</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-check-ins" class="toc-h2 toc-link" data-title="Get All Check-ins">Get All Check-ins</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Candide Garden API. You can use our API to access Garden API endpoints, which can get information on your Tickets and Checkins.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://garden-api.candideapp.com"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: plants-plants-plants"</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>plants-plants-plants</code> with your API key.</p>
+</blockquote>
+
+<p>Candide Garden API uses API keys to allow access to the API. You can register a new API key at our <a href="https://cms.candideapp.com/api-keys">CMS</a>.</p>
+
+<p>The Garden API expects the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Authorization: plants-plants-plants</code></p>
+
+<aside class="notice">
+You must replace <code>plants-plants-plants</code> with your personal API key.
+</aside>
+<h1 id='tickets'>Tickets</h1><h2 id='get-all-tickets'>Get All Tickets</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://garden-api.candideapp.com/tickets"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: plants-plants-plants"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10715970-8aa8-4a54-9d74-c5dc6738364f"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"candideUser"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiresAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-02-20T23:59:59.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"startsAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-18T15:28:01.778Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paymentStatus"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paymentIntentId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"th111@whatever.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"canEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"canPhone"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+441111111552"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Garden Membership"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"visitors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Child"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"fullAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1, Street Way, Road St"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9abf5e8a-74dd-441d-a3a0-2c21fe608bb2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"candideUser"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiresAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-20T23:59:59.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"startsAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-02-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-02-21T14:41:13.768Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paymentStatus"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paymentIntentId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"th111@whatever.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"canEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"canPhone"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+441111111552"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Garden Membership"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"visitors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Child"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"fullAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1, Street Way, Road St"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all tickets.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>https://garden-api.candideapp.com/tickets</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>startDate</td>
+<td></td>
+<td>Filter out all records before this date and time. ISO Format YYYY-MM-DDTHH:mm:ss UTC</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>now</td>
+<td>Filter out all records after this date and time</td>
+</tr>
+<tr>
+<td>after</td>
+<td></td>
+<td>The id of the last record from the previous page</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>10</td>
+<td>The number of records per page</td>
+</tr>
+<tr>
+<td>sortOrder</td>
+<td>ASC</td>
+<td>ASC or DESC</td>
+</tr>
+</tbody></table>
+<h1 id='check-ins'>Check-ins</h1><h2 id='get-all-check-ins'>Get All Check-ins</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://garden-api.candideapp.com/checkins"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: plants-plants-plants"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"61515eb4-10f7-4eed-b835-5fe385cf53cd"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"checkinTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-27T16:30:41.023Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ticketId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e4213f17-3631-4f3d-98a5-f1c8b57e0159"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attendance"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"th111@whatever.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01445 326598"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55c77fe7-4885-4a7a-a554-cdf9649f74d0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"checkinTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-27T16:22:09.674Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ticketId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e4213f17-3631-4f3d-98a5-f1c8b57e0159"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attendance"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"th111@whatever.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01445 326598"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all check-ins.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>https://garden-api.candideapp.com/checkins</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>startDate</td>
+<td></td>
+<td>Filter out all records before this date and time. ISO Format YYYY-MM-DDTHH:mm:ss UTC</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>now</td>
+<td>Filter out all records after this date and time</td>
+</tr>
+<tr>
+<td>ticketId</td>
+<td></td>
+<td>Return only checkins for the specified ticket</td>
+</tr>
+<tr>
+<td>after</td>
+<td></td>
+<td>The id of the last record from the previous page</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>10</td>
+<td>The number of records per page</td>
+</tr>
+<tr>
+<td>sortOrder</td>
+<td>ASC</td>
+<td>ASC or DESC</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- You are not authorized to view this resource.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified records could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a resource with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The records requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many records! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
