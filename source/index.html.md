@@ -51,52 +51,61 @@ curl "https://garden-api.candideapp.com/tickets"
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": "10715970-8aa8-4a54-9d74-c5dc6738364f",
-    "candideUser": true,
-    "expiresAt": "2022-02-20T23:59:59.000Z",
-    "startsAt": "2021-02-21T00:00:00.000Z",
-    "createdAt": "2020-03-18T15:28:01.778Z",
-    "paymentStatus": null,
-    "paymentIntentId": null,
-    "email": "th111@whatever.com",
-    "preferences": {
-      "canEmail": false,
-      "canPhone": true
-    },
-    "phone": "+441111111552",
-    "productName": "Garden Membership",
-    "visitors": {
-      "Child": 1,
-      "Adult": 1
-    },
-    "fullAddress": "1, Street Way, Road St",
-    "status": "ACTIVE"
-  },
-  {
-    "id": "9abf5e8a-74dd-441d-a3a0-2c21fe608bb2",
-    "candideUser": true,
-    "expiresAt": "2021-02-20T23:59:59.000Z",
-    "startsAt": "2020-02-21T00:00:00.000Z",
-    "createdAt": "2020-02-21T14:41:13.768Z",
-    "paymentStatus": null,
-    "paymentIntentId": null,
-    "email": "th111@whatever.com",
-    "preferences": {
-      "canEmail": false,
-      "canPhone": true
-    },
-    "phone": "+441111111552",
-    "productName": "Garden Membership",
-    "visitors": {
-      "Adult": 1,
-      "Child": 1
-    },
-    "fullAddress": "1, Street Way, Road St",
-    "status": "ACTIVE"
+{
+  "tickets": {
+    "results": [
+      {
+        "id": "10715970-8aa8-4a54-9d74-c5dc6738364f",
+        "candideUser": true,
+        "expiresAt": "2022-02-20T23:59:59.000Z",
+        "startsAt": "2021-02-21T00:00:00.000Z",
+        "createdAt": "2020-03-18T15:28:01.778Z",
+        "paymentStatus": null,
+        "paymentIntentId": null,
+        "email": "th111@whatever.com",
+        "preferences": {
+          "canEmail": false,
+          "canPhone": true
+        },
+        "phone": "+441111111552",
+        "productName": "Garden Membership",
+        "visitors": {
+          "Child": 1,
+          "Adult": 1
+        },
+        "fullAddress": "1, Street Way, Road St",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "9abf5e8a-74dd-441d-a3a0-2c21fe608bb2",
+        "candideUser": true,
+        "expiresAt": "2021-02-20T23:59:59.000Z",
+        "startsAt": "2020-02-21T00:00:00.000Z",
+        "createdAt": "2020-02-21T14:41:13.768Z",
+        "paymentStatus": null,
+        "paymentIntentId": null,
+        "email": "th111@whatever.com",
+        "preferences": {
+          "canEmail": false,
+          "canPhone": true
+        },
+        "phone": "+441111111552",
+        "productName": "Garden Membership",
+        "visitors": {
+          "Adult": 1,
+          "Child": 1
+        },
+        "fullAddress": "1, Street Way, Road St",
+        "status": "ACTIVE"
+      }
+    ],
+    "backwardEdge": "id:10715970-8aa8-4a54-9d74-c5dc6738364f,createdAt:1591369643939",
+    "forwardEdge": "id:9abf5e8a-74dd-441d-a3a0-2c21fe608bb2,createdAt:1591365113606",
+    "hasMore": true,
+    "numberOfAllItems": 4019,
+    "numberOfPageItems": 2
   }
-]
+}
 ```
 
 This endpoint retrieves all tickets.
@@ -111,7 +120,7 @@ This endpoint retrieves all tickets.
 | --------- | ------- | ------------------------------------------------------------------------------------ |
 | startDate |         | Filter out all records before this date and time. ISO Format YYYY-MM-DDTHH:mm:ss UTC |
 | endDate   | now     | Filter out all records after this date and time                                      |
-| after     |         | The id of the last record from the previous page                                     |
+| after     |         | A cursor from the previous page. Use forwardEdge and backwardEdge to traverse pages  |
 | limit     | 10      | The number of records per page                                                       |
 | sortOrder | ASC     | ASC or DESC                                                                          |
 
@@ -127,30 +136,39 @@ curl "https://garden-api.candideapp.com/checkins"
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": "61515eb4-10f7-4eed-b835-5fe385cf53cd",
-    "checkinTime": "2020-04-27T16:30:41.023Z",
-    "notes": null,
-    "ticketId": "e4213f17-3631-4f3d-98a5-f1c8b57e0159",
-    "attendance": {
-      "Adult": 1
-    },
-    "email": "th111@whatever.com",
-    "phone": "01445 326598"
-  },
-  {
-    "id": "55c77fe7-4885-4a7a-a554-cdf9649f74d0",
-    "checkinTime": "2020-04-27T16:22:09.674Z",
-    "notes": null,
-    "ticketId": "e4213f17-3631-4f3d-98a5-f1c8b57e0159",
-    "attendance": {
-      "Adult": 1
-    },
-    "email": "th111@whatever.com",
-    "phone": "01445 326598"
+{
+  "checkins": {
+    "results": [
+      {
+        "id": "61515eb4-10f7-4eed-b835-5fe385cf53cd",
+        "checkinTime": "2020-04-27T16:30:41.023Z",
+        "notes": null,
+        "ticketId": "e4213f17-3631-4f3d-98a5-f1c8b57e0159",
+        "attendance": {
+          "Adult": 1
+        },
+        "email": "th111@whatever.com",
+        "phone": "01445 326598"
+      },
+      {
+        "id": "55c77fe7-4885-4a7a-a554-cdf9649f74d0",
+        "checkinTime": "2020-04-27T16:22:09.674Z",
+        "notes": null,
+        "ticketId": "e4213f17-3631-4f3d-98a5-f1c8b57e0159",
+        "attendance": {
+          "Adult": 1
+        },
+        "email": "th111@whatever.com",
+        "phone": "01445 326598"
+      }
+    ],
+    "backwardEdge": "id:61515eb4-10f7-4eed-b835-5fe385cf53cd,createdAt:1591092074828",
+    "forwardEdge": "id:55c77fe7-4885-4a7a-a554-cdf9649f74d0,createdAt:1582733078354",
+    "hasMore": false,
+    "numberOfAllItems": 18,
+    "numberOfPageItems": 2
   }
-]
+}
 ```
 
 This endpoint retrieves all check-ins.
@@ -166,6 +184,6 @@ This endpoint retrieves all check-ins.
 | startDate |         | Filter out all records before this date and time. ISO Format YYYY-MM-DDTHH:mm:ss UTC |
 | endDate   | now     | Filter out all records after this date and time                                      |
 | ticketId  |         | Return only checkins for the specified ticket                                        |
-| after     |         | The id of the last record from the previous page                                     |
+| after     |         | A cursor from the previous page. Use forwardEdge and backwardEdge to traverse pages  |
 | limit     | 10      | The number of records per page                                                       |
 | sortOrder | ASC     | ASC or DESC                                                                          |
