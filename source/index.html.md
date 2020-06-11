@@ -74,7 +74,10 @@ curl "https://garden-api.candideapp.com/tickets"
           "Adult": 1
         },
         "fullAddress": "1, Street Way, Road St",
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "holderFirstName": "Test",
+        "holderLastName": "Person",
+        "markedForDeletion": false
       },
       {
         "id": "9abf5e8a-74dd-441d-a3a0-2c21fe608bb2",
@@ -96,7 +99,10 @@ curl "https://garden-api.candideapp.com/tickets"
           "Child": 1
         },
         "fullAddress": "1, Street Way, Road St",
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "holderFirstName": "Test",
+        "holderLastName": "Person",
+        "markedForDeletion": false
       }
     ],
     "backwardEdge": "id:10715970-8aa8-4a54-9d74-c5dc6738364f,createdAt:1591369643939",
