@@ -341,6 +341,10 @@ You must replace <code>plants-plants-plants</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves all tickets.</p>
+
+<p>Please note that a ticket which is <code>markedForDeletion</code> will be deleted from the system on the <code>expiresAt</code> date.</p>
+
+<p>To remain compliant with GDPR regulations, please delete from any records you keep on this date.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>https://garden-api.candideapp.com/tickets</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
