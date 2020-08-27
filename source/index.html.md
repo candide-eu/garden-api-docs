@@ -116,6 +116,10 @@ curl "https://garden-api.candideapp.com/tickets"
 
 This endpoint retrieves all tickets.
 
+Please note that a ticket which is `markedForDeletion` will be deleted from the system on the `expiresAt` date.
+
+To remain compliant with GDPR regulations, please delete from any records you keep on this date.
+
 ### HTTP Request
 
 `https://garden-api.candideapp.com/tickets`
