@@ -227,6 +227,9 @@
                   <li>
                     <a href="#get-all-tickets" class="toc-h2 toc-link" data-title="Get All Tickets">Get All Tickets</a>
                   </li>
+                  <li>
+                    <a href="#get-all-update-tickets" class="toc-h2 toc-link" data-title="Get All Update Tickets">Get All Update Tickets</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -300,51 +303,41 @@ You must replace <code>plants-plants-plants</code> with your personal API key.
           </span><span class="nl">"Child"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
         </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"visitorTypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4356b3a9-1d7b-4449-a6ce-10ff6d2ba85f"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adult"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isChild"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2943ee0b-081f-4f77-a766-8e263dcdb442"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Child"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isChild"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
         </span><span class="nl">"fullAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1, Street Way, Road St"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"holderFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"holderLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"markedForDeletion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9abf5e8a-74dd-441d-a3a0-2c21fe608bb2"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"candideUser"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"expiresAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-20T23:59:59.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"startsAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-02-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-02-21T14:41:13.768Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"paymentStatus"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"paymentIntentId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"th111@whatever.com"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"preferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"canEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"canPhone"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+441111111552"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Garden Membership"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"visitors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"Child"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"fullAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1, Street Way, Road St"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"holderFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"holderLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"markedForDeletion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-      </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"backwardEdge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id:10715970-8aa8-4a54-9d74-c5dc6738364f,createdAt:1591369643939"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"forwardEdge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id:9abf5e8a-74dd-441d-a3a0-2c21fe608bb2,createdAt:1591365113606"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasMore"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"numberOfAllItems"</span><span class="p">:</span><span class="w"> </span><span class="mi">4019</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"numberOfPageItems"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="nl">"numberOfPageItems"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves all tickets.</p>
 
-<p>Please note that a ticket which is <code>markedForDeletion</code> will be deleted from the system on the <code>expiresAt</code> date.</p>
+<aside class="notice">
+Please note that a ticket which is <code>markedForDeletion</code> will be deleted from the system on the <code>expiresAt</code> date.
 
-<p>To remain compliant with GDPR regulations, please delete from any records you keep on this date.</p>
+To remain compliant with GDPR regulations, please delete from any records you keep on this date.
+</aside>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>https://garden-api.candideapp.com/tickets</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
@@ -364,6 +357,103 @@ You must replace <code>plants-plants-plants</code> with your personal API key.
 <td>endDate</td>
 <td>now</td>
 <td>Filter out all records after this date and time</td>
+</tr>
+<tr>
+<td>after</td>
+<td></td>
+<td>A cursor from the previous page. Use forwardEdge and backwardEdge to traverse pages</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>10</td>
+<td>The number of records per page</td>
+</tr>
+<tr>
+<td>sortOrder</td>
+<td>ASC</td>
+<td>ASC or DESC</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-update-tickets'>Get All Update Tickets</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://garden-api.candideapp.com/ticket-updates"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: plants-plants-plants"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"tickets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10715970-8aa8-4a54-9d74-c5dc6738364f"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"candideUser"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"expiresAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-02-20T23:59:59.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"startsAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-18T15:28:01.778Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"paymentStatus"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"paymentIntentId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"th111@whatever.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"preferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"canEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canPhone"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+441111111552"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Garden Membership"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"visitors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"Child"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"visitorTypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4356b3a9-1d7b-4449-a6ce-10ff6d2ba85f"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adult"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isChild"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2943ee0b-081f-4f77-a766-8e263dcdb442"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Child"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isChild"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"fullAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1, Street Way, Road St"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"holderFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"holderLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"markedForDeletion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"backwardEdge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id:10715970-8aa8-4a54-9d74-c5dc6738364f,createdAt:1591369643939"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"forwardEdge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id:9abf5e8a-74dd-441d-a3a0-2c21fe608bb2,createdAt:1591365113606"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasMore"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"numberOfAllItems"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"numberOfPageItems"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all tickets that have either been updated or have expired between the supplied dates.</p>
+
+<aside class="notice">
+Please note that a ticket which was <code>markedForDeletion</code> and has expired <em>will not</em> be returned by this endpoint.
+</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>https://garden-api.candideapp.com/ticket-updates</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>startDate</td>
+<td></td>
+<td>Filter out all records last updated before this date and time. ISO Format YYYY-MM-DDTHH:mm:ss UTC</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>now</td>
+<td>Filter out all records last updated after this date and time</td>
 </tr>
 <tr>
 <td>after</td>
@@ -422,9 +512,9 @@ You must replace <code>plants-plants-plants</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves all check-ins.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>https://garden-api.candideapp.com/checkins</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
