@@ -124,7 +124,7 @@ To remain compliant with GDPR regulations, please delete from any records you ke
 | limit     | 10      | The number of records per page                                                       |
 | sortOrder | ASC     | ASC or DESC                                                                          |
 
-## Get All Update Tickets
+## Get All Updated Tickets
 
 ```shell
 curl "https://garden-api.candideapp.com/ticket-updates"
