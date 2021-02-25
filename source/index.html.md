@@ -73,52 +73,42 @@ curl "https://garden-api.candideapp.com/tickets"
           "Child": 1,
           "Adult": 1
         },
+        "visitorTypes": [
+          {
+            "id": "4356b3a9-1d7b-4449-a6ce-10ff6d2ba85f",
+            "name": "Adult",
+            "isChild": false
+          },
+          {
+            "id": "2943ee0b-081f-4f77-a766-8e263dcdb442",
+            "name": "Child",
+            "isChild": true
+          }
+        ],
         "fullAddress": "1, Street Way, Road St",
         "status": "ACTIVE",
         "holderFirstName": "Test",
         "holderLastName": "Person",
         "markedForDeletion": false
       },
-      {
-        "id": "9abf5e8a-74dd-441d-a3a0-2c21fe608bb2",
-        "candideUser": true,
-        "expiresAt": "2021-02-20T23:59:59.000Z",
-        "startsAt": "2020-02-21T00:00:00.000Z",
-        "createdAt": "2020-02-21T14:41:13.768Z",
-        "paymentStatus": null,
-        "paymentIntentId": null,
-        "email": "th111@whatever.com",
-        "preferences": {
-          "canEmail": false,
-          "canPhone": true
-        },
-        "phone": "+441111111552",
-        "productName": "Garden Membership",
-        "visitors": {
-          "Adult": 1,
-          "Child": 1
-        },
-        "fullAddress": "1, Street Way, Road St",
-        "status": "ACTIVE",
-        "holderFirstName": "Test",
-        "holderLastName": "Person",
-        "markedForDeletion": false
-      }
+      ...
     ],
     "backwardEdge": "id:10715970-8aa8-4a54-9d74-c5dc6738364f,createdAt:1591369643939",
     "forwardEdge": "id:9abf5e8a-74dd-441d-a3a0-2c21fe608bb2,createdAt:1591365113606",
     "hasMore": true,
     "numberOfAllItems": 4019,
-    "numberOfPageItems": 2
+    "numberOfPageItems": 1
   }
 }
 ```
 
 This endpoint retrieves all tickets.
 
-Please note that a ticket which is `markedForDeletion` will be deleted from the system on the `expiresAt` date.
+<aside class="notice">
+Please note that a ticket which is <code>markedForDeletion</code> will be deleted from the system on the <code>expiresAt</code> date.
 
 To remain compliant with GDPR regulations, please delete from any records you keep on this date.
+</aside>
 
 ### HTTP Request
 
@@ -133,6 +123,87 @@ To remain compliant with GDPR regulations, please delete from any records you ke
 | after     |         | A cursor from the previous page. Use forwardEdge and backwardEdge to traverse pages  |
 | limit     | 10      | The number of records per page                                                       |
 | sortOrder | ASC     | ASC or DESC                                                                          |
+
+## Get All Update Tickets
+
+```shell
+curl "https://garden-api.candideapp.com/ticket-updates"
+  -H "Authorization: plants-plants-plants"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "tickets": {
+    "results": [
+      {
+        "id": "10715970-8aa8-4a54-9d74-c5dc6738364f",
+        "candideUser": true,
+        "expiresAt": "2022-02-20T23:59:59.000Z",
+        "startsAt": "2021-02-21T00:00:00.000Z",
+        "createdAt": "2020-03-18T15:28:01.778Z",
+        "paymentStatus": null,
+        "paymentIntentId": null,
+        "email": "th111@whatever.com",
+        "preferences": {
+          "canEmail": false,
+          "canPhone": true
+        },
+        "phone": "+441111111552",
+        "productName": "Garden Membership",
+        "visitors": {
+          "Child": 1,
+          "Adult": 1
+        },
+        "visitorTypes": [
+          {
+            "id": "4356b3a9-1d7b-4449-a6ce-10ff6d2ba85f",
+            "name": "Adult",
+            "isChild": false
+          },
+          {
+            "id": "2943ee0b-081f-4f77-a766-8e263dcdb442",
+            "name": "Child",
+            "isChild": true
+          }
+        ],
+        "fullAddress": "1, Street Way, Road St",
+        "status": "ACTIVE",
+        "holderFirstName": "Test",
+        "holderLastName": "Person",
+        "markedForDeletion": false
+      },
+      ...
+    ],
+    "backwardEdge": "id:10715970-8aa8-4a54-9d74-c5dc6738364f,createdAt:1591369643939",
+    "forwardEdge": "id:9abf5e8a-74dd-441d-a3a0-2c21fe608bb2,createdAt:1591365113606",
+    "hasMore": true,
+    "numberOfAllItems": 120,
+    "numberOfPageItems": 1
+  }
+}
+```
+
+This endpoint retrieves all tickets that have either been updated or have expired between the supplied dates.
+
+<aside class="notice">
+Please note that a ticket which was <code>markedForDeletion</code> and has expired <em>will not</em> be returned by this endpoint.
+</aside>
+
+### HTTP Request
+
+`https://garden-api.candideapp.com/ticket-updates`
+
+### Query Parameters
+
+| Parameter | Default | Description                                                                                       |
+| --------- | ------- | ------------------------------------------------------------------------------------------------- |
+| startDate |         | Filter out all records last updated before this date and time. ISO Format YYYY-MM-DDTHH:mm:ss UTC |
+| endDate   | now     | Filter out all records last updated after this date and time                                      |
+| after     |         | A cursor from the previous page. Use forwardEdge and backwardEdge to traverse pages               |
+| limit     | 10      | The number of records per page                                                                    |
+| sortOrder | ASC     | ASC or DESC                                                                                       |
 
 # Check-ins
 
