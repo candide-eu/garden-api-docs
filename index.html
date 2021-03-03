@@ -230,6 +230,9 @@
                   <li>
                     <a href="#get-all-updated-tickets" class="toc-h2 toc-link" data-title="Get All Updated Tickets">Get All Updated Tickets</a>
                   </li>
+                  <li>
+                    <a href="#get-ticket" class="toc-h2 toc-link" data-title="Get Ticket">Get Ticket</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -471,6 +474,71 @@ Please note that a ticket which was <code>markedForDeletion</code> and has expir
 <td>ASC or DESC</td>
 </tr>
 </tbody></table>
+<h2 id='get-ticket'>Get Ticket</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://garden-api.candideapp.com/tickets/:id"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: plants-plants-plants"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10715970-8aa8-4a54-9d74-c5dc6738364f"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"candideUser"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expiresAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-02-20T23:59:59.000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"startsAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-18T15:28:01.778Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paymentStatus"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"paymentIntentId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"th111@whatever.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"preferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"canEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canPhone"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+441111111552"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Garden Membership"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"visitors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"Child"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"visitorTypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4356b3a9-1d7b-4449-a6ce-10ff6d2ba85f"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adult"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"isChild"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2943ee0b-081f-4f77-a766-8e263dcdb442"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Child"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"isChild"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"fullAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1, Street Way, Road St"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"holderFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"holderLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"markedForDeletion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves the spcified ticket by the provided id.</p>
+
+<aside class="notice">
+Please note that requesting a ticket which has been deleted, whether due to an automated process or a GDPR request, will result in a <em>404</em> response.
+</aside>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>https://garden-api.candideapp.com/tickets/:id</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td></td>
+<td>The id of the ticket to fetch</td>
+</tr>
+</tbody></table>
 <h1 id='check-ins'>Check-ins</h1><h2 id='get-all-check-ins'>Get All Check-ins</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://garden-api.candideapp.com/checkins"</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: plants-plants-plants"</span>
 </code></pre></div>
@@ -512,9 +580,9 @@ Please note that a ticket which was <code>markedForDeletion</code> and has expir
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves all check-ins.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>https://garden-api.candideapp.com/checkins</code></p>
-<h3 id='query-parameters-3'>Query Parameters</h3>
+<h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -574,7 +642,7 @@ Please note that a ticket which was <code>markedForDeletion</code> and has expir
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified records could not be found.</td>
+<td>Not Found -- The specified record or records could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
