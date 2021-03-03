@@ -205,6 +205,71 @@ Please note that a ticket which was <code>markedForDeletion</code> and has expir
 | limit     | 10      | The number of records per page                                                                    |
 | sortOrder | ASC     | ASC or DESC                                                                                       |
 
+## Get Ticket
+
+```shell
+curl "https://garden-api.candideapp.com/tickets/:id"
+  -H "Authorization: plants-plants-plants"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": "10715970-8aa8-4a54-9d74-c5dc6738364f",
+  "candideUser": true,
+  "expiresAt": "2022-02-20T23:59:59.000Z",
+  "startsAt": "2021-02-21T00:00:00.000Z",
+  "createdAt": "2020-03-18T15:28:01.778Z",
+  "paymentStatus": null,
+  "paymentIntentId": null,
+  "email": "th111@whatever.com",
+  "preferences": {
+    "canEmail": false,
+    "canPhone": true
+  },
+  "phone": "+441111111552",
+  "productName": "Garden Membership",
+  "visitors": {
+    "Child": 1,
+    "Adult": 1
+  },
+  "visitorTypes": [
+    {
+      "id": "4356b3a9-1d7b-4449-a6ce-10ff6d2ba85f",
+      "name": "Adult",
+      "isChild": false
+    },
+    {
+      "id": "2943ee0b-081f-4f77-a766-8e263dcdb442",
+      "name": "Child",
+      "isChild": true
+    }
+  ],
+  "fullAddress": "1, Street Way, Road St",
+  "status": "ACTIVE",
+  "holderFirstName": "Test",
+  "holderLastName": "Person",
+  "markedForDeletion": false
+}
+```
+
+This endpoint retrieves the spcified ticket by the provided id.
+
+<aside class="notice">
+Please note that requesting a ticket which has been deleted, whether due to an automated process or a GDPR request, will result in a <em>404</em> response.
+</aside>
+
+### HTTP Request
+
+`https://garden-api.candideapp.com/tickets/:id`
+
+### Query Parameters
+
+| Parameter | Default | Description                             |
+| --------- | ------- | --------------------------------------- |
+| id        |         | The id of the ticket to fetch           |
+
 # Check-ins
 
 ## Get All Check-ins

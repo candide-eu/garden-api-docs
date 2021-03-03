@@ -5,7 +5,7 @@
 | 400        | Bad Request -- Your request is invalid.                                                   |
 | 401        | Unauthorized -- Your API key is wrong.                                                    |
 | 403        | Forbidden -- You are not authorized to view this resource.                                |
-| 404        | Not Found -- The specified records could not be found.                                    |
+| 404        | Not Found -- The specified record or records could not be found.                          |
 | 405        | Method Not Allowed -- You tried to access a resource with an invalid method.              |
 | 406        | Not Acceptable -- You requested a format that isn't json.                                 |
 | 410        | Gone -- The records requested has been removed from our servers.                          |
